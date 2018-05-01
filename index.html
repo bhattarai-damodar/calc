@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
+
 <head>
-	<title>Hisab Kitab Machine</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hisab Machine</title>
 	<script src="calculator.js"> </script>
 	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<link href="https://fonts.googleapis.com/css?family=Biryani" rel="stylesheet">
 
 </head>
 <body>
+	<header> 
+<font color="red"> हिसाब  </font> Machine
+	</header>
 <div class="calculator" >
+	
 <input type="text" id="display" >
 <input type="text" id="fresult">
 <div class="column">
 <div class="row">
 	<input type="button" id="C" value="C" style="color: red;">
-	<input type="button" id="bracket" value="()" style="color: blue;">
+	<input type="button" id="backspace" value="<--" style="color: red;">
 	<input type="button" id="percent" value="%" style="color: blue;">
 	<input type="button" id="divide" value="/" style="color: blue;">
 </div>
@@ -37,7 +45,7 @@
 	<input type="button" id="add" value="+" style="color: blue;">
 </div>
 <div class="row">
-	<input type="button" id="plusminus" value="+/-">
+	<input type="button" id="bracket" value="()" style="color: blue;">
 	<input type="button" id="0" value="0">
 	<input type="button" id="point" value="." >
 	<input type="button" id="equal" value="=" style="color: white; background-color: blue; opacity: 0.7;">
@@ -45,6 +53,9 @@
 </div>
 
 </div>
+<footer>
+<img src="fb.png" > Developed by <font color="red"> Damodar Bhattarai </font>
 
+</footer>
 </body>
 </html>

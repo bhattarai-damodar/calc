@@ -38,8 +38,8 @@ function myLoad(){
 	btn.addEventListener('click', clear);
 	var btn = document.getElementById('percent');
 	btn.addEventListener('click', operator);
-	var btn = document.getElementById('plusminus');
-	btn.addEventListener('click', changesign);
+	var btn = document.getElementById('backspace');
+	btn.addEventListener('click', remove);
 	var btn = document.getElementById('bracket');
 	btn.addEventListener('click', braces);
 
@@ -88,28 +88,23 @@ var lastChar = string.charAt(stringLength - 1);
 		}
 	result.value=((result.value)+input);	
 }
+
 function result(){
 	var fresult = document.getElementById('fresult');
+	var result= document.getElementById('display')
+	var check=result.value;
+	var katiLamo=check.length;
+	if(	katiLamo<=0){
+		fresult.value="Pagal vais????";
+	}
+	else
 	fresult.value=eval(display.value);
 }
 function clear(){
 	display.value="";
 	fresult.value="";
 }
-function changesign(){
-	var result = document.getElementById('display');
-	// Identifying last character in calculator
-// so that it doesn't repeat the same on clicking
-		var string=result.value;
-var stringLength = string.length;
-var lastChar = string.charAt(stringLength - 1); 
-var firstChar = string.charAt(0); 
 
-		if(firstChar=='-'){
-			return;
-		}
-	result.value=("-"+"("+result.value+")");
-}
 function braces(){
 	var result = document.getElementById('display');
 	// Identifying last character in calculator
@@ -122,4 +117,11 @@ var lastChar = string.charAt(stringLength - 1);
 			return;
 		}
 	result.value=("("+result.value+")");
+}
+
+function remove(){
+var result= document.getElementById('display');
+var suruko= result.value;
+
+	display.value = suruko.slice(0, -1);
 }
